@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="jumbotron my-jumbo text-white">
+        <p class="lead mobile-text">You can contact me via email at teemurahkonen@gmail.com or using the below message
+            form.</p>
+        <hr class="my-4"/>
+        <div class="container">
+            <form method="post">
+                {% csrf_token %}
+                <p class="form-group row">
+                    {{ form.message.label_tag}}
+                    {{ form.message }}
+                </p>
+                <p class="row justify-content-start no-margin-bottom">
+                    {{ form.email.label_tag }}
+                </p>
+                <p class="form-group row justify-content-between">
+                    {{ form.email }}
+                    <input class="btn btn-secondary my-button col-2" type="submit" value="Send message">
+                </p>
+                    {{ form.email.errors }}
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

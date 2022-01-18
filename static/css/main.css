@@ -1,0 +1,444 @@
+html,body,header {
+    height:100vh;
+}
+
+body {
+
+    background-image: url(/static/images/Roadtrip-7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    overflow:hidden;
+}
+
+.scrollable {
+    overflow:auto;
+    height: calc(100vh - 158px);
+}
+
+.home {
+    height: calc(100vh - 68px);
+    padding-bottom: 68px;
+}
+
+.modal {
+    text-align: center;
+}
+
+.nav-pills > a {
+  color: #FFFAF0;
+}
+
+.white_text {
+    color: #FFFAF0;
+}
+
+.ig-img {
+    height: 30px;
+    width: 30px;
+}
+
+.img-fluid {
+    object-fit: cover;
+    image-position: center;
+}
+
+.bg-dark {
+    background-color: #252A2E!important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #FFFAF0;
+}
+
+.navbar-dark .navbar-brand {
+    color: #FFFAF0;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    text-decoration: underline;
+    color: #FFFAF0;
+}
+
+.mb-5, .my-5 {
+    margin-bottom: 1rem!important;
+}
+
+.my-button {
+    background-color: #252A2E!important;
+    width: 15% !important;
+    white-space:normal !important;
+    word-wrap: break-word;
+    outline: none!important;
+}
+
+.spinner-border {
+    width: 6rem;
+    height: 6rem;
+    display: none;
+    position: absolute;
+
+}
+
+.my-hidden {
+    visibility: hidden;
+}
+
+.nav-pills .nav-link.active {
+    background-color: rgba(37, 42, 46,0.7)!important;
+    color: white;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.no-margin {
+    margin-right: 0;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+
+.my-jumbo{
+    background-color: rgba(37, 42, 46,0.8)!important;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+}
+
+
+.masonry {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -8px; /* Adjustment for the gutter */
+  width: 100%;
+}
+
+.masonry-brick {
+    flex: auto;
+    height: 250px;
+    min-width: 150px;
+    max-width: 50%;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 0 0 8px 8px;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+.masonry-brick-v {
+    width: 200px!important;
+}
+
+.masonry-brick-h {
+    width: 375px;
+}
+
+
+.masonry-img {
+    object-fit: cover;
+    width: 100%;
+    height:250px;
+}
+
+.desc{
+    opacity: .5;
+}
+
+.h-myh {
+   height: 70% !important;
+ }
+
+.cover {
+    object-fit: cover;
+}
+
+.h-90 {
+    height: 90%!important;
+}
+
+.h-5 {
+    height: 5%!important;
+}
+
+.masonry-brick:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.img-title {
+    opacity: 0;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.utils {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.carousel-caption {
+    padding-bottom: 0;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 5%;
+    height: 90%!important;
+}
+
+.img-overlay:hover .img-title {
+    opacity: 1;
+}
+
+.h4, h4 {
+    user-select: none!important;
+}
+
+
+.comment-overlay {
+   position: absolute;
+   right:0;
+   background: rgba(0,0,0,0.8); /* Black see-through */
+   color: #f1f1f1;
+   width: 30%;
+   height: 60%;
+   transition: .5s ease;
+   opacity:1;
+   color: white;
+   font-size: 20px;
+   padding: 20px;
+   text-align: center;
+   display: none;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+}
+
+.my-flex {
+    display: flex;
+}
+
+.comments {
+    height: 70%;
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+    overflow: auto;
+}
+
+.comment {
+    font-size: medium;
+    text-align: start;
+    width: 100%;
+    overflow-wrap: break-word;
+    padding-left: 2px;
+    padding-right: 2px;
+
+}
+
+.close-comments {
+    line-height: 0.3;
+    position: absolute;
+    right:5px;
+    top: 5px;
+    opacity: .5;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .6s;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.modal-photo-h {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.my-row {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.addcomment {
+    height: 30%;
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+    margin-top: 20px;
+    font-size: medium;
+}
+
+.modal-content {
+    border: 0px !important;
+    background-color: transparent !important;
+}
+
+.close {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    color: #FFF !important;
+    opacity: .8;
+    }
+
+.close:focus {
+    outline-width: 0;
+}
+
+.close:hover .tooltiptext {
+  visibility: visible;
+}
+
+@media (max-width: 1080px) {
+
+    .scrollable {
+        height: calc(100vh - 250px) !important;
+    }
+    .card-columns {
+        column-count: 2;
+    }
+    .modal-dialog-centered {
+    height: calc(100vh - 1rem) !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    }
+    .modal-lg, .modal-xl {
+        max-width: calc(100vw - 2rem);
+    }
+    .navbar-brand {
+        font-size: 6rem;
+    }
+    .container {
+        width: 100% !important;
+        max-width: none !important;
+    }
+    .navbar-toggler-icon {
+        width: 6em;
+        height: 6em;
+    }
+
+    .comment-overlay {
+        width: 100%;
+        height: 80%;
+    }
+
+    .navbar-toggler {
+        outline: none!important;
+    }
+
+    .navbar-nav {
+        font-size: 3rem;
+    }
+
+    .comment {
+        font-size: xx-large;
+    }
+
+    .form-control {
+        font-size: xx-large;
+    }
+
+    .my-button {
+        font-size: xx-large;
+    }
+
+    .addcomment {
+        font-size: xx-large;
+    }
+    .ig-img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .mobile-text {
+        font-size: 2rem;
+    }
+    .h3, h3 {
+        font-size: 2.5rem;
+    }
+
+    .close {
+        font-size: 4rem !important;
+    }
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+    width: 7%;
+}
+
+}
+
+@media (min-width: 1081px) {
+    .my-jumbo-front{
+        height: 75vh;
+    }
+
+    .img-fluid {
+        height: 100%;
+        width: 100%
+    }
+
+    .my-scale {
+        height: calc(100% - 178.500px)
+    }
+    .card-columns {
+        column-count: 4;
+    }
+
+    .navbar-brand {
+        font-size: 1.75rem;
+    }
+
+    .navbar-nav {
+            font-size: 1.5rem;
+            padding-left:62px;
+    }
+
+    .modal-dialog-centered {
+        min-height: calc(100% - 3.5rem) !important;
+        height: 45vh !important;
+        max-width: 75vw !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    .h-myh {
+        height: 100% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-columns {
+        column-count: 5;
+    }
+}
+
+
+
+
+
