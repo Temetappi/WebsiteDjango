@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from common.photo_handler import load_photos
+from utils.photo_handler import load_photos
 
 
 class Command(BaseCommand):
