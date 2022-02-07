@@ -40,6 +40,10 @@ ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1',
                  'trphotography-site.herokuapp.com','www.teemurahkonen.com']
 
 
+# DIGITALOCEAN
+django_do = os.getenv("DJANGO_ALLOWED_HOSTS")
+ALLOWED_HOSTS.extend(django_do)
+
 # Application definition
 
 INSTALLED_APPS = [
