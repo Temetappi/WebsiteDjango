@@ -1,5 +1,5 @@
 from django import forms
-from common.mailgun import Mailgun
+from utils.mailgun import Mailgun
 
 
 class ContactForm(forms.Form):
