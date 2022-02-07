@@ -12,4 +12,3 @@ RUN apk add --no-cache --virtual .build-deps \
 RUN apk --no-cache add libpq
 COPY . /website/
 EXPOSE 8000
-CMD ["gunicorn", "--bind", ":8000", "WebsiteDjango.wsgi:application"]
