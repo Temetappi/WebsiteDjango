@@ -1,6 +1,5 @@
 html,body,header {
     height:100vh;
-    font-family: dm_serif_displayregular;
 }
 
 body {
@@ -11,6 +10,7 @@ body {
     background-attachment: fixed;
     background-position: center top;
     overflow:hidden;
+    font-family: dm_serif_displayregular;
 }
 
 @font-face {
@@ -20,6 +20,10 @@ body {
     font-weight: normal;
     font-style: normal;
 
+}
+
+.lead {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 .scrollable {
