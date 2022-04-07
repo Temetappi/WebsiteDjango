@@ -8,15 +8,32 @@ services:
       - ./data/db:/var/lib/postgresql/data
   web:
     env_file: .env
-    image: registry.digitalocean.com/trah-repo/website
+    build: .
     command: >
       sh -c "python manage.py migrate &&
              python manage.py sync_database &&
              gunicorn --bind :8000 WebsiteDjango.wsgi:application"
     volumes:
       - .:/website
-    ports:
-      - "80:8000"
+    expose:
+      - 8000
     depends_on:
       - db
     restart: on-failure
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/lib/letsencrypt:/var/lib/letsencrypt
+    depends_on:
+      - web
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/lib/letsencrypt:/var/lib/letsencrypt
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"

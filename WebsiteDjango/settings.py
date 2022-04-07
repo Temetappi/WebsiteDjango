@@ -37,7 +37,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1',
-                 'trphotography-site.herokuapp.com','www.teemurahkonen.com']
+                 'trphotography-site.herokuapp.com','www.teemurahkonen.com', 'teemurahkonen.com']
 
 
 # Application definition
