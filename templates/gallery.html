@@ -2,18 +2,16 @@
 {% block content %}
 <div class="container mt-3 mb-5">
     <div class="nav nav-pills nav-fill" role="tablist">
-        <a class="nav-item nav-link active" data-toggle="pill" href="#city" role="tab"><h3>Cities</h3></a>
-        <a class="nav-item nav-link" data-toggle="pill" href="#landscapes" role="tab"><h3>Landscapes</h3></a>
-        <a class="nav-item nav-link" data-toggle="pill" href="#people" role="tab"><h3>People</h3></a>
-        <a class="nav-item nav-link" data-toggle="pill" href="#nature" role="tab"><h3>Nature</h3></a>
-        <a class="nav-item nav-link" data-toggle="pill" href="#macro" role="tab"><h3>Macro</h3></a>
+        <a class="nav-item nav-link active" data-toggle="pill" href="#people" role="tab"><h5>People</h5></a>
+        <a class="nav-item nav-link" data-toggle="pill" href="#city" role="tab"><h5>Cities</h5></a>
+        <a class="nav-item nav-link" data-toggle="pill" href="#landscapes" role="tab"><h5>Landscapes</h5></a>
     </div>
 </div>
 
 <div id="gallerycontainer" class="container">
     <div class="tab-content scrollable" id="myTabContent">
         {% for q, value in photos.items %}
-        {% if q == 'city'%}
+        {% if q == 'people'%}
         <div class="tab-pane fade show active" id={{ q }} role="tabpanel">
             {% else %}
             <div class="tab-pane fade " id={{ q }} role="tabpanel">
@@ -32,7 +30,6 @@
                                 <h5 class="img-title mx-auto">Click to enlarge</h5>
                             </div>
                         </div>
-
                         {% endfor %}
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 html,body,header {
     height:100vh;
+    font-family: dm_serif_displayregular;
 }
 
 body {
@@ -10,6 +11,15 @@ body {
     background-attachment: fixed;
     background-position: center top;
     overflow:hidden;
+}
+
+@font-face {
+    font-family: 'dm_serif_displayregular';
+    src: url('/static/fonts/dmserifdisplay-regular-webfont.woff2') format('woff2'),
+         url('/static/fonts/dmserifdisplay-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 .scrollable {
