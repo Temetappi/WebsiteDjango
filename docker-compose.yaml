@@ -2,13 +2,13 @@ version: "3.9"
 
 services:
   db:
-    container-name: postgres
+    container_name: postgres
     env_file: .env
     image: postgres:14.1-alpine
     volumes:
       - ./data/db:/var/lib/postgresql/data
   web:
-    container-name: website
+    container_name: website
     env_file: .env
     image: registry.digitalocean.com/trah-repo/website
     command: >
@@ -23,7 +23,7 @@ services:
       - db
     restart: on-failure
   nginx:
-    container-name: nginx
+    container_name: nginx
     build: ./nginx
     ports:
       - 80:80
@@ -35,7 +35,7 @@ services:
       - web
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
   certbot:
-    container-name: certbot
+    container_name: certbot
     image: certbot/certbot:latest
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
