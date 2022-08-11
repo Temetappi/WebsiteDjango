@@ -26,7 +26,7 @@ body {
 }
 
 #gallerycontainer {
-    height: calc(100vh - 201px) !important;
+    height: calc(100% - 201px) !important;
 }
 
 .scrollable {
@@ -353,7 +353,7 @@ body {
     }
 
     #gallerycontainer {
-        height: calc(100vh - 269px) !important;
+        height: calc(100% - 269px) !important;
     }
 
     .navbar-toggler-icon {
