@@ -12,7 +12,8 @@ services:
     env_file: .env
     image: registry.digitalocean.com/trah-repo/website
     command: >
-      sh -c "python manage.py migrate &&
+      sh -c "python manage.py makemigrations &&
+             python manage.py migrate &&
              python manage.py sync_database &&
              gunicorn --bind :8000 WebsiteDjango.wsgi:application"
     volumes:
