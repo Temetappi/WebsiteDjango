@@ -36,7 +36,7 @@ def load_photos():
                 else:
                     orientation = "l"
                     url_small = utils.cloudinary_url(filepath, width=640, crop="scale", sign_url=True)
-                photo = Photo(filename=file, url=f["secure_url"], url_small=url_small[0], category=c,
+                photo = Photo(filename=file, created=f["created_at"], url=f["secure_url"], url_small=url_small[0], category=c,
                               description="placeholder", orientation=orientation).save()
                 logger.info('Added %s to database.' % file)
         photos_in_cloudinary[c] = photos

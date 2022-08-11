@@ -31,6 +31,6 @@ class GalleryView(ListView):
         photos = {}
         categories = models.Photo.objects.order_by('category').values_list('category', flat=True).distinct()
         for c in categories:
-            photos[c] = list(models.Photo.objects.filter(category=c).order_by('-filename'))
+            photos[c] = list(models.Photo.objects.filter(category=c).order_by('-created'))
         context['photos'] = photos
         return context
