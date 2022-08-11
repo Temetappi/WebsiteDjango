@@ -353,7 +353,7 @@ body {
     }
 
     #gallerycontainer {
-        height: calc(100% - 269px) !important;
+        height: calc(100% - 325px) !important;
     }
 
     .navbar-toggler-icon {
