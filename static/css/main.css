@@ -3,15 +3,12 @@ body, html, .app {
 }
 
 body {
-
-    background-image: url(/static/images/Roadtrip-7.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center top;
-    overflow:hidden;
+    background-color: #d9d7d7;
     font-family: dm_serif_displayregular;
 }
+
+.row{ display: flex; align-items: center;}
+
 
 @font-face {
     font-family: 'dm_serif_displayregular';
@@ -82,6 +79,10 @@ body {
     margin-bottom: 1rem!important;
 }
 
+.my-container {
+    margin-bottom: 50px!important;
+}
+
 .my-button {
     background-color: #252A2E!important;
     width: 15% !important;
@@ -132,33 +133,23 @@ body {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
+  justify-content: space-evenly;
 }
 
 .masonry-brick {
-    flex: auto;
-    height: 250px;
-    min-width: 150px;
-    max-width: 50%;
+    height: 320px;
     overflow: hidden;
-    border-radius: 5px;
-    margin: 0 4px 8px 4px;
+    border-radius: 0px;
+    margin: 20px 20px 20px 20px;
     background-color: #333;
     color: white;
     position: relative;
 }
-.masonry-brick-v {
-    width: 200px!important;
-}
-
-.masonry-brick-h {
-    width: 375px;
-}
-
 
 .masonry-img {
-    object-fit: cover;
+    object-fit: contain;
+    height: 100%;
     width: 100%;
-    height:250px;
 }
 
 .desc{
