@@ -1,22 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-<div id="gallerycontainer" class="container">
-    <div class="masonry scrollable" id="gallery" data-toggle="modal" data-target="#photoModal">
-        {% for photo in photos %}
-        {% if photo.orientation == 'p' %}
-        <div class="masonry-brick masonry-brick-v">
-            {% else %}
-            <div class="masonry-brick masonry-brick-h">
-                {% endif %}
-                <img class="masonry-img" alt="Responsive image"
-                     src="{{ photo.url_small }}" loading="lazy"/>
-                <div class="img-overlay d-flex align-items-center" data-target="#photoCarousel"
-                     data-slide-to={{ forloop.counter0 }}>
-                    <h5 class="img-title mx-auto">Click to enlarge</h5>
-                </div>
+<div class="masonry scrollable" id="gallery" data-toggle="modal" data-target="#photoModal">
+    {% for photo in photos %}
+    {% if photo.orientation == 'p' %}
+    <div class="masonry-brick masonry-brick-v">
+        {% else %}
+        <div class="masonry-brick masonry-brick-h">
+            {% endif %}
+            <img class="masonry-img" alt="Responsive image"
+                 src="{{ photo.url_small }}" loading="lazy"/>
+            <div class="img-overlay d-flex align-items-center" data-target="#photoCarousel"
+                 data-slide-to={{ forloop.counter0 }}>
+                <h5 class="img-title mx-auto">Click to enlarge</h5>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
 </div>
 
@@ -32,15 +30,6 @@
                             {% else %}
                             <div class="carousel-item h-100">
                                 {% endif %}
-                                <div class="carousel-caption carousel-caption-top d-none d-md-block">
-                                    <div class="row justify-content-center">
-                                        <button type="button" class="close utils btn-lg"
-                                                aria-label="Close" data-toggle="tooltip" data-placement="top"
-                                                title="Close">
-                                            <a href="/gallery" class="btn btn-info" role="button">Link Button</a>
-                                        </button>
-                                    </div>
-                                </div>
                                 <div class="d-flex h-80 carousel-img align-items-center justify-content-center">
                                     <div class="spinner-border" role="status" id="spinner">
                                         <span class="sr-only">Loading...</span>
