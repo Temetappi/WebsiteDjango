@@ -173,8 +173,8 @@ body {
     object-fit: cover;
 }
 
-.h-90 {
-    height: 90%!important;
+.h-80 {
+    height: 80%!important;
 }
 
 .h-5 {
@@ -192,13 +192,29 @@ body {
     margin-bottom: 0;
 }
 
+.modal-backdrop
+{
+    opacity:0.9 !important;
+}
+
 .utils {
     margin-left: 1rem;
     margin-right: 1rem;
 }
 
+.carousel-caption-top {
+    top: 0;
+    bottom: auto;
+}
+
 .carousel-caption {
     padding-bottom: 0;
+}
+
+.carousel-img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .carousel-control-next, .carousel-control-prev {
@@ -214,23 +230,6 @@ body {
     user-select: none!important;
 }
 
-
-.comment-overlay {
-   position: absolute;
-   right:0;
-   background: rgba(0,0,0,0.8); /* Black see-through */
-   color: #f1f1f1;
-   width: 30%;
-   height: 60%;
-   transition: .5s ease;
-   opacity:1;
-   color: white;
-   font-size: 20px;
-   padding: 20px;
-   text-align: center;
-   display: none;
-}
-
 .img-overlay {
     position: absolute;
     top: 0;
@@ -242,31 +241,6 @@ body {
 
 .my-flex {
     display: flex;
-}
-
-.comments {
-    height: 70%;
-    width: 100%;
-    background: rgba(255,255,255,0.2);
-    overflow: auto;
-}
-
-.comment {
-    font-size: medium;
-    text-align: start;
-    width: 100%;
-    overflow-wrap: break-word;
-    padding-left: 2px;
-    padding-right: 2px;
-
-}
-
-.close-comments {
-    line-height: 0.3;
-    position: absolute;
-    right:5px;
-    top: 5px;
-    opacity: .5;
 }
 
 .tooltiptext {
