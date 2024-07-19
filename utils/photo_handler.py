@@ -25,6 +25,7 @@ def load_photos():
             else:
                 orientation = "l"
                 url_small = utils.cloudinary_url(filepath, width=640, crop="scale", sign_url=True)
+                url_small = url_small.replace("http", "https")
             Photo(filename=file, created=f["created_at"], url=f["secure_url"], url_small=url_small[0], category="people",
                           description="placeholder", orientation=orientation).save()
             logger.info('Added %s to database.' % file)
