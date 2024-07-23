@@ -21,11 +21,10 @@ def load_photos():
             filepath = f"photos/people/{file}"
             if f['height'] > f['width']:
                 orientation = "p"
-                url_small = utils.cloudinary_url(filepath, height=640, crop="scale", sign_url=True)
+                url_small = utils.cloudinary_url(filepath, height=640, crop="scale", sign_url=True, secure=True)
             else:
                 orientation = "l"
-                url_small = utils.cloudinary_url(filepath, width=640, crop="scale", sign_url=True)
-                url_small = url_small.replace("http", "https")
+                url_small = utils.cloudinary_url(filepath, width=640, crop="scale", sign_url=True, secure=True)
             Photo(filename=file, created=f["created_at"], url=f["secure_url"], url_small=url_small[0], category="people",
                           description="placeholder", orientation=orientation).save()
             logger.info('Added %s to database.' % file)
