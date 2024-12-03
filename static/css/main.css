@@ -293,7 +293,7 @@ body {
   visibility: visible;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1300px) {
 
     .scrollable {
         height: 100%;
@@ -380,7 +380,7 @@ body {
 
 }
 
-@media (min-width: 1081px) {
+@media (min-width: 1301px) {
     .my-jumbo-front{
         height: 75vh;
     }
@@ -418,7 +418,7 @@ body {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
     .card-columns {
         column-count: 5;
     }
