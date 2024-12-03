@@ -149,7 +149,6 @@ body {
 .masonry-img {
     object-fit: contain;
     height: 100%;
-    width: 100%;
 }
 
 .desc{
@@ -293,7 +292,7 @@ body {
   visibility: visible;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1080px) {
 
     .scrollable {
         height: 100%;
@@ -380,7 +379,7 @@ body {
 
 }
 
-@media (min-width: 1301px) {
+@media (min-width: 1081px) {
     .my-jumbo-front{
         height: 75vh;
     }
@@ -418,7 +417,7 @@ body {
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
     .card-columns {
         column-count: 5;
     }
